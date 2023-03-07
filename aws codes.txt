@@ -28,16 +28,15 @@ systemctl restart nginx
 systemctl status nginx
 
 /etc/nginx/conf.d/
-			codewithdurgesh.com.conf
+			website.com.conf
 
 
 server {
   listen 0.0.0.0:80;
   root /home/ubuntu/project/examfront; 
-  server_name codewithdurgesh.com;	
+  server_name website.com;	
   location / {
     try_files $uri $uri/ /index.html;
   }
 }
 
-hNzWkp9aBLYwQ5m
