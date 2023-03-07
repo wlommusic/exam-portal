@@ -1,0 +1,50 @@
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <mat-card *ngIf="quiz">
+          <mat-card-header>
+            <h1>Read the instructions provided in this page carefully.</h1>
+          </mat-card-header>
+          <mat-card-content>
+            <h2>{{ quiz.title }}</h2>
+            <p>{{ quiz.description }}</p>
+            <hr />
+            <h1>Important Instructions</h1>
+            <ul style="font-size: 12px;">
+              <li>
+                This quiz contains
+                <b>{{ quiz.noOfQuestions }} questions</b> there is no time
+                limit.
+              </li>
+              <li>
+                The quizzes consists of questions carefully designed to help you
+                self-assess your comprehension of the information presented on
+                the topics covered in the module. No data will be collected on
+                the website regarding your responses or how many times you take
+                the quiz.
+              </li>
+              <li>
+                Each question in the quiz is of multiple-choice or "true or
+                false" format. Read each question carefully, and click on the
+                button next to your response that is based on the information
+                covered on the topic in the module. Each correct or incorrect
+                response will result in appropriate feedback immediately at the
+                bottom of the screen.
+              </li>
+              <li>You have unlimted attempts to pass the quiz.</li>
+              <li>
+                All questions are mandatory and there is no negetive marking for
+                wrong question
+              </li>
+            </ul>
+          </mat-card-content>
+          <mat-card-actions class="text-center ">
+            <button mat-raised-button color="accent" class="mt20" (click)="startQuiz()" >Start Quiz</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- [routerLink]="'/start-quiz/' +qId" -->

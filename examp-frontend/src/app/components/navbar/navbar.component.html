@@ -1,0 +1,46 @@
+<mat-toolbar color="primary" class="navbar-default">
+  <a
+    routerLink="/"
+    mat-icon-button
+    class="example-icon mr20"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon
+      svgIcon="thumbs-up"
+      aria-hidden="false"
+      aria-label="Example thumbs up SVG icon"
+    ></mat-icon>
+  </a>
+  <span>Pariksha</span>
+  <span class="example-spacer"></span>
+  <a
+    *ngIf="!login.isLoggedIn()"
+    routerLink="/login"
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+  <mat-icon class="material-symbols-outlined">login</mat-icon>
+  </a>
+  <a
+    *ngIf="!login.isLoggedIn()"
+    routerLink="/signup"
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with share icon"
+  >
+    <mat-icon class="material-symbols-outlined">manage_accounts</mat-icon>
+  </a>
+  <a
+    (click)="logout()"
+    *ngIf="login.isLoggedIn()"
+    mat-icon-button
+    class="example-icon mr20 ml20"
+    aria-label="Example icon-button with share icon"
+    ><mat-icon class="material-symbols-outlined">logout</mat-icon></a
+  >
+
+  <span *ngIf="login.isLoggedIn()" class=""
+    >hi, {{ login.getUser().username }}
+  </span>
+</mat-toolbar>

@@ -1,0 +1,16 @@
+.truncate{
+    overflow:hidden;
+    white-space: nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    text-overflow: ellipsis;
+    display: block;
+}
+.header-image {
+    background-image: url("../../../../assets/header-icon.png");
+    background-size: cover;
+  }
+
+.border{
+    border: 2em red;
+}  
